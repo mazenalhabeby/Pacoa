@@ -28,6 +28,7 @@ import palletC from "./images/pallets/palletC.png"
 import palletD from "./images/pallets/palletD.png"
 import palletE from "./images/pallets/palletE.png"
 import palletF from "./images/pallets/palletF.png"
+import industrie from "./images/pallets/Industrie.png"
 
 export {
   logo,
@@ -60,4 +61,5 @@ export {
   palletD,
   palletE,
   palletF,
+  industrie,
 }

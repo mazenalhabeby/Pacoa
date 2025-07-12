@@ -2,7 +2,7 @@ import {servicesPage} from "@/data/service"
 
 function Services() {
   return (
-    <section className="py-16 px-6 md:px-20 bg-white">
+    <section className="py-16 px-6 md:px-20 bg-white max-w-7xl mx-auto">
       <h2 className="text-center text-4xl font-bold text-[#b85b16] mb-2 uppercase">
         Unsere Dienstleistungen
       </h2>

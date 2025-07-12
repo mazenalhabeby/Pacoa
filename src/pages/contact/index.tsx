@@ -1,22 +1,60 @@
+import {toast} from "sonner"
 import {contactInfo} from "@/data/contactInfo"
-import React, {useState} from "react"
+import {useForm} from "react-hook-form"
+import {Button} from "@/components/ui/button"
 
-const Contact: React.FC = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
+interface ContactFormData {
+  Name: string
+  Email: string
+  Nachricht: string
+}
+
+const Contact = () => {
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: {isSubmitting},
+  } = useForm<ContactFormData>({
+    defaultValues: {
+      Name: "",
+      Email: "",
+      Nachricht: "",
+    },
   })
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    setFormData({...formData, [e.target.name]: e.target.value})
-  }
+  const onSubmit = async (data: ContactFormData) => {
+    try {
+      const response = await fetch(
+        "https://formsubmit.co/ajax/amd07dev@gmail.com",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: JSON.stringify({
+            ...data,
+            _subject: "Neue Kontaktanfrage von der Pacoa.at Website",
+            _captcha: false,
+          }),
+        }
+      )
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    alert("Message sent! (not really, this is just a placeholder)")
+      const result = await response.json()
+
+      if (result.success === "true") {
+        reset()
+        toast.success("Nachricht erfolgreich gesendet!")
+      } else {
+        toast.error("Fehler beim Senden. Bitte versuchen Sie es erneut.")
+      }
+    } catch (err) {
+      console.error(err)
+      toast.error(
+        "Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut."
+      )
+    }
   }
 
   return (
@@ -37,42 +75,33 @@ const Contact: React.FC = () => {
         <div className="grid md:grid-cols-2 gap-10">
           {/* Form */}
           <form
-            onSubmit={handleSubmit}
+            onSubmit={handleSubmit(onSubmit)}
             className="bg-white p-8 rounded-lg shadow-lg space-y-5"
           >
             <input
               type="text"
-              name="name"
+              id="name"
               placeholder="Ihr Name"
-              required
+              {...register("Name", {required: true})}
               className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#b85b16]"
-              onChange={handleChange}
-              value={formData.name}
             />
             <input
               type="email"
-              name="email"
+              id="email"
               placeholder="Ihre E-Mail"
-              required
+              {...register("Email", {required: true})}
               className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#b85b16]"
-              onChange={handleChange}
-              value={formData.email}
             />
             <textarea
-              name="message"
               rows={6}
               placeholder="Ihre Nachricht"
-              required
+              id="message"
+              {...register("Nachricht")}
               className="w-full px-4 py-3 border border-gray-300 rounded-md resize-none focus:outline-none focus:ring-2 focus:ring-[#b85b16]"
-              onChange={handleChange}
-              value={formData.message}
             />
-            <button
-              type="submit"
-              className="w-full bg-[#b85b16] hover:bg-[#a24d12] text-white font-semibold py-3 rounded-md transition"
-            >
-              Nachricht senden
-            </button>
+            <Button type="submit" disabled={isSubmitting}>
+              {isSubmitting ? "Wird gesendet..." : "Absenden"}
+            </Button>
           </form>
 
           {/* Contact Info Cards */}

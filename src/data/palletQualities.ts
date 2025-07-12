@@ -1,47 +1,47 @@
 // src/data/pallets.ts
-import {palletA, palletB, palletC, palletD, palletE, palletF} from "@/assets"
+import {palletA, palletB, palletC, palletD, palletE, industrie} from "@/assets"
 
 export const palletQualities = [
   {
-    grade: "A",
+    grade: "Palette neu",
     image: palletA,
     description:
-      "Paletten in Top-Qualität und nahezu neuwertigem Zustand. Kaum gebraucht, stabil und langlebig – ideal für hochwertige Lieferungen.",
+      "Nagelneue Palette in höchster Qualität – unbenutzt, besonders stabil und ideal für hochwertige oder sensible Warentransporte.",
     price: 25.99,
   },
   {
-    grade: "B",
+    grade: "Paletten Klasse A Neuwertig",
     image: palletB,
     description:
-      "Guter Zustand mit leichten Gebrauchsspuren. Strukturell einwandfrei und hervorragend für den wiederholten Einsatz in der Logistik geeignet.",
+      "Paletten mit minimalen Gebrauchsspuren – technisch einwandfrei, sehr stabil und mehrfach wiederverwendbar.",
     price: 19.99,
   },
   {
-    grade: "C",
+    grade: "Palette Klasse B+ Automatenfähig",
     image: palletC,
     description:
-      "Mäßige Abnutzung, aber weiterhin nutzbar. Optimal für den internen Lagergebrauch oder Kurzstreckentransporte.",
+      "Gut erhaltene Palette mit mittlerem Verschleiß – funktional, einsatzbereit und geeignet für automatische Lagersysteme.",
     price: 14.99,
   },
   {
-    grade: "D",
+    grade: "Palette Klasse B Speditionstauschpalette",
     image: palletD,
     description:
-      "Deutlich sichtbare Abnutzung, eventuell mit kleinen Reparaturen. Geeignet für unkritische Transportanwendungen.",
+      "Deutlich gebrauchte Palette, stabil und tauschfähig – gängig im Speditionswesen für unkritische Lieferungen.",
     price: 9.99,
   },
   {
-    grade: "E",
+    grade: "Palette Defektklasse",
     image: palletE,
     description:
-      "Ältere oder stark beanspruchte Paletten. Kostengünstige Lösung für den einmaligen Gebrauch oder lokale Transporte.",
+      "Beschädigte oder reparierte Paletten – eingeschränkt belastbar, geeignet für einfache Transporte oder kurzfristige Lagerung.",
     price: 5.99,
   },
   {
-    grade: "F",
-    image: palletF,
+    grade: "Industrie Einweg",
+    image: industrie,
     description:
-      "Niedrigste Qualitätsstufe – hauptsächlich zur Weiterverwertung oder Holzrecycling geeignet. Nicht für den Versand empfohlen.",
-    price: 2.99,
+      "Stabile Einwegpalette für den industriellen Gebrauch – konzipiert für einmalige Verwendung, besonders geeignet für Export und interne Logistik.",
+    price: 5.49,
   },
 ]

@@ -17,7 +17,7 @@ const AboutSection = () => {
         {/* RIGHT: Text */}
         <div>
           <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight mb-4">
-            Über Woodbridge Pallet
+            Über Pacoa
           </h2>
           <p className="text-lg text-gray-700 mb-4">
             Seit Jahren vertrauen Unternehmen in ganz Österreich auf unsere

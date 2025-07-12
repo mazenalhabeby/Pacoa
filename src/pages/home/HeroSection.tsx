@@ -16,7 +16,7 @@ const HeroSection = () => {
       <div className="w-full md:w-1/2 h-full flex items-center justify-center px-6 md:px-12 bg-[#f4efe3] z-10 text-center py-12 md:py-0">
         <div className="max-w-md">
           <p className="uppercase text-sm font-semibold text-gray-700 tracking-wide">
-            Woodbridge Pallet
+            Pacoa
           </p>
           <h1 className="mt-2 text-4xl font-extrabold text-gray-900 leading-tight">
             Zuverlässige Paletten.

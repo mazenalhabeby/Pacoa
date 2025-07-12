@@ -14,8 +14,6 @@ import {
   vetropack,
 } from "@/assets"
 
-// Replace with your actual image imports
-
 const logos: string[] = [
   cocaCola,
   dbSchenker,
@@ -34,7 +32,7 @@ const ClientCarousel: React.FC = () => {
   const looped = [...logos, ...logos]
 
   return (
-    <section className="bg-gray-100 py-10 overflow-hidden">
+    <section className="bg-gray-100 py-10 overflow-hidden max-w-7xl mx-auto">
       <h2 className="text-center text-3xl font-light mb-8 font-[cursive]">
         Ein kleiner Auszug aus unserer Kundenliste
       </h2>

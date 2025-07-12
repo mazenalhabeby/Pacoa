@@ -1,14 +1,16 @@
 import {Outlet} from "react-router"
 import Navbar from "../components/navbar"
 import Footer from "@/components/Footer"
+import {Toaster} from "sonner"
 
 function MainLayout() {
   return (
     <div>
       <Navbar />
-      <main className="min-h-screen bg-gray-100">
+      <main className=" bg-gray-100">
         <Outlet />
       </main>
+      <Toaster />
       <Footer />
     </div>
   )
