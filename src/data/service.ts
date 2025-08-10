@@ -1,7 +1,7 @@
 import {
   newPallets,
   usedPallets,
-  purchaseRetrieval,
+  EuCar,
   repairPrograms,
   heatTreated,
   mulch,
@@ -22,7 +22,7 @@ export const services = [
   },
   {
     title: "Palettenankauf & Abholung",
-    image: purchaseRetrieval,
+    image: EuCar,
     description:
       "Wir kaufen Ihre gebrauchten Paletten zurück und bieten einen Abholservice mit Absetztrailern an.",
   },
@@ -39,10 +39,9 @@ export const services = [
       "Alle unsere Paletten können für den Export gemäß ISPM #15 zertifiziert werden – dank eigener Trockenkammer.",
   },
   {
-    title: "Holz-Mulchprodukte",
+    title: "Hackschnitzel",
     image: mulch,
-    description:
-      "Woodbridge Pallet ist Ihr zuverlässiger Großhändler für hochwertigen Holzmulch und Einstreu.",
+    description: "Wir sind ihr Großhändler für hochwertige Hackschnitzel!",
   },
 ]
 
@@ -61,7 +60,7 @@ export const servicesPage = [
   },
   {
     title: "Palettenankauf & Abholung",
-    image: purchaseRetrieval,
+    image: EuCar,
     description:
       "Wir kaufen Ihre gebrauchten Paletten zurück und stellen bei Bedarf einen Abholservice mit Abstellauflieger zur Verfügung.",
   },
@@ -78,9 +77,8 @@ export const servicesPage = [
       "Alle unsere Paletten können nach ISPM #15 zertifiziert und mit unserem eigenen Trocknungsofen für den Export behandelt werden.",
   },
   {
-    title: "Holz-Mulch-Produkte",
+    title: "Hackschnitzel",
     image: mulch,
-    description:
-      "PACOA ist Ihr zuverlässiger Großhändler für hochwertige Holzmulchprodukte und Einstreu.",
+    description: "Wir sind ihr Großhändler für hochwertige Hackschnitzel!",
   },
 ]

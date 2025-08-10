@@ -3,10 +3,11 @@ import paypal from "./images/paypal.jpg"
 import sofort from "./images/sofort.jpg"
 import vorkasse from "./images/vorkasse.jpg"
 import heroImage from "./images/pallets.png"
-import company from "./images/company.png"
+import company from "./images/company.jpg"
 import newPallets from "./images/new_pallet.jpg"
 import usedPallets from "./images/used_pallets.jpg"
 import purchaseRetrieval from "./images/retrievel_and_purchases.jpg"
+import EuCar from "./images/eur-car.png"
 import repairPrograms from "./images/repair_and_management.jpg"
 import heatTreated from "./images/heat_treated_palletsa.jpg"
 import mulch from "./images/mulch.jpg"
@@ -40,6 +41,7 @@ export {
   newPallets,
   usedPallets,
   purchaseRetrieval,
+  EuCar,
   repairPrograms,
   heatTreated,
   mulch,
