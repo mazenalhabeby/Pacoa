@@ -4,6 +4,7 @@ export const navLinks = [
   {name: "Dienstleistungen", href: "/services"},
   {name: "Produkte", href: "/products"},
   {name: "Kontakt", href: "/contact"},
+  {name: "Impressum", href: "/impressum"},
 ]
 
 export type NavLink = (typeof navLinks)[number]

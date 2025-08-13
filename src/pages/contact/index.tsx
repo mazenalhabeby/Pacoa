@@ -26,7 +26,7 @@ const Contact = () => {
   const onSubmit = async (data: ContactFormData) => {
     try {
       const response = await fetch(
-        "https://formsubmit.co/ajax/amd07dev@gmail.com",
+        "https://formsubmit.co/ajax/peter.hauer@pacoa.at",
         {
           method: "POST",
           headers: {
